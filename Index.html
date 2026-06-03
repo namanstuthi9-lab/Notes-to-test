@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Note-to-Test</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f7ff;
+    margin:0;
+    padding:0;
+}
+header{
+    background:#4a6cf7;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:20px;
+}
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+input[type=file]{
+    margin:10px 0;
+}
+button{
+    background:#4a6cf7;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background:#3557e0;
+}
+#output{
+    margin-top:20px;
+    padding:15px;
+    background:#eef2ff;
+    border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Note-to-Test</h1>
+    <p>Upload Notes → Get a Worksheet</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Upload Your Notes</h2>
+
+        <input type="file" id="noteImage">
+
+        <button onclick="generateTest()">
+            Generate Worksheet
+        </button>
+
+        <div id="output"></div>
+    </div>
+</div>
+
+<script>
+function generateTest(){
+    document.getElementById("output").innerHTML = `
+    <h3>Sample Worksheet</h3>
+
+    <p><b>1.</b> What is the main topic of the notes?</p>
+
+    <p><b>2.</b> Fill in the blank:</p>
+    <p>________ is an important concept from the notes.</p>
+
+    <p><b>3.</b> True or False:</p>
+    <p>The notes contain useful study information.</p>
+
+    <p><b>4.</b> Short Answer:</p>
+    <p>Explain one key idea from the notes.</p>
+    `;
+}
+</script>
+
+</body>
+</html>
